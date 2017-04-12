@@ -1,0 +1,18 @@
+<h1>The Cookbook</h1>
+
+<% if @recipes.any? %>
+
+<h3>List of Recipes</h3>
+
+<% @recipes.each() do |recipe| %>
+<li><a href="/recipes/<%= recipe.id()%>"><%= recipe.name %></a></li>
+<% end %>
+
+<% else %>
+
+<h4>There are no recipes in this book</h4>
+
+<% end %>
+
+<br><br>
+<a href="/recipes/new">Add New Recipe</a>
